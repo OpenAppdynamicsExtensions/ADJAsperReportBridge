@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+	<class name="de.appdynamics.ace.report.jasperreports.studio.adapter.ADDataAdapter">
+		<map-to xml="adDataAdapter"/>
+		<field name="class" type="java.lang.Class" handler="net.sf.jasperreports.data.ClassNameFieldHandler">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="name" type="string">
+			<bind-xml name="name" node="element"/>
+		</field>
+		<field name="useSSL" type="boolean">
+			<bind-xml name="useSSL" node="element"/>
+		</field>
+		<field name="host" type="string">
+			<bind-xml name="host" node="element"/>
+		</field>
+		<field name="port" type="string">
+			<bind-xml name="port" node="element"/>
+		</field>
+		<field name="username" type="string">
+			<bind-xml name="username" node="element"/>
+		</field>
+		<field name="password" type="string">
+			<bind-xml name="password" node="element"/>
+		</field>
+		<field name="account" type="string">
+			<bind-xml name="account" node="element"/>
+		</field>
+		
+		
+	</class>
+</mapping>
