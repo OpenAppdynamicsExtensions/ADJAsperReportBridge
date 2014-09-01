@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="AppDynamics.Reporting.JasperReport"
+      label="AppDynamicsAdapter(JasperReport)"
+      version="0.0.5">
+
+   <description url="http://www.example.com/description">
+      AppDynamicsAdapter(JasperReport)
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="de.appdynamics.ace.report.jasperreports.studio.adapter"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
