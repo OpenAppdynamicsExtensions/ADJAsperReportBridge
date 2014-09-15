@@ -1,14 +1,17 @@
-package de.appdynamics.ace.report.jasperreports.studio.adapter;
+package de.appdynamics.ace.report.jasperreports.studio;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+import de.appdynamics.ace.report.jasperreports.studio.adapter.ADDataAdapterServiceFactory;
+import de.appdynamics.ace.report.jasperreports.studio.adapter.ADExecuterFactoryBundle;
+import de.appdynamics.ace.report.jasperreports.studio.functions.ADFunctionBundle;
 import net.sf.jasperreports.data.DataAdapterServiceFactory;
 import net.sf.jasperreports.engine.JRPropertiesMap;
 import net.sf.jasperreports.engine.query.JRQueryExecuterFactoryBundle;
 import net.sf.jasperreports.extensions.ExtensionsRegistry;
 import net.sf.jasperreports.extensions.ExtensionsRegistryFactory;
+import net.sf.jasperreports.functions.FunctionsBundle;
 
 public class ADExtensionRegisterFactory implements ExtensionsRegistryFactory {
 
@@ -26,6 +29,8 @@ public class ADExtensionRegisterFactory implements ExtensionsRegistryFactory {
 		
 		private ArrayList<JRQueryExecuterFactoryBundle> queryExecuterFactories;
 		private ArrayList<DataAdapterServiceFactory> dataAdapterServiceFactories;
+		private ArrayList<FunctionsBundle> functionBundles;
+	
 
 		@SuppressWarnings("unchecked")
 		public <T> List<T> getExtensions(Class<T> extensionType) {
@@ -42,6 +47,11 @@ public class ADExtensionRegisterFactory implements ExtensionsRegistryFactory {
 					queryExecuterFactories.add(ADExecuterFactoryBundle.getInstance());
 				}
 				return (List<T>) queryExecuterFactories;
+			} else if (FunctionsBundle.class.equals(extensionType)) {
+				if (functionBundles == null) {
+					functionBundles = new ArrayList<FunctionsBundle>();
+					functionBundles.add(ADFunctionBundle.getInstance());
+				}
 			}
 			return null;
 		}
