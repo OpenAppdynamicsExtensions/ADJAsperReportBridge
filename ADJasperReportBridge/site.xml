@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/AppDynamics.Reporting.JasperReport_0.0.5.jar" id="AppDynamics.Reporting.JasperReport" version="0.0.5">
+   <feature url="features/AppDynamics.Reporting.JasperReport_0.0.6.1.jar" id="AppDynamics.Reporting.JasperReport" version="0.0.6.1">
       <category name="AppdynamicsReporting"/>
    </feature>
    <category-def name="AppdynamicsReporting" label="AppdynamicsReporting"/>
