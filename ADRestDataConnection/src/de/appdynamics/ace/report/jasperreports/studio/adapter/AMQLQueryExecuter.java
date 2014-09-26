@@ -31,6 +31,7 @@ public class AMQLQueryExecuter extends JRAbstractQueryExecuter {
 	private JRDataset _dataset;
 	private JasperReportsContext _context;
 	private ControllerRestAccess _restConnection;
+	private String _para;
 
 	public AMQLQueryExecuter(JasperReportsContext jasperReportsContext,
 			JRDataset dataset,
@@ -40,7 +41,14 @@ public class AMQLQueryExecuter extends JRAbstractQueryExecuter {
 		_context = jasperReportsContext;
 		_dataset = dataset;
 		_parameters = parameters;
-		
+		_para = dumpPara(_parameters);	
+		 
+		 System.out.println("####################################################");
+			
+		 System.out.println(_para);
+		 System.out.println("####################################################");
+		 System.out.println("####################################################");
+		 
 		_restConnection = (ControllerRestAccess) getParameterValue(ADAdapterConstants.CONNECTION,true);
 		parseQuery();
 	}
@@ -165,5 +173,16 @@ public class AMQLQueryExecuter extends JRAbstractQueryExecuter {
 			return;
 		}
 		
+	}
+	private String dumpPara(Map<String, ? extends JRValueParameter> parameters) {
+		StringBuffer b = new StringBuffer();
+		for (String k : parameters.keySet()) {
+			Object p = parameters.get(k);
+			b.append(k)
+			 .append(" ---> ")
+			 .append(""+p)
+			 .append("\n");
+		}
+		return b.toString();
 	}
 }

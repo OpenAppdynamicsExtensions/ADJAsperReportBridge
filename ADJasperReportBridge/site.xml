@@ -3,5 +3,20 @@
    <feature url="features/AppDynamics.Reporting.JasperReport_0.0.6.1.jar" id="AppDynamics.Reporting.JasperReport" version="0.0.6.1">
       <category name="AppdynamicsReporting"/>
    </feature>
+   <feature url="features/AppDynamics.Reporting.JasperReport_1.0.6.1.jar" id="AppDynamics.Reporting.JasperReport" version="1.0.6.1">
+      <category name="AppdynamicsReporting"/>
+   </feature>
+   <feature url="features/AppDynamics.Reporting.JasperReport_1.0.6.2.jar" id="AppDynamics.Reporting.JasperReport" version="1.0.6.2">
+      <category name="AppdynamicsReporting"/>
+   </feature>
+   <feature url="features/AppDynamics.Reporting.JasperReport_1.0.6.3.jar" id="AppDynamics.Reporting.JasperReport" version="1.0.6.3">
+      <category name="AppdynamicsReporting"/>
+   </feature>
+   <feature url="features/AppDynamics.Reporting.JasperReport_1.0.6.4.jar" id="AppDynamics.Reporting.JasperReport" version="1.0.6.4">
+      <category name="AppdynamicsReporting"/>
+   </feature>
+   <feature url="features/AppDynamics.Reporting.JasperReport_1.4.6.jar" id="AppDynamics.Reporting.JasperReport" version="1.4.6">
+      <category name="AppdynamicsReporting"/>
+   </feature>
    <category-def name="AppdynamicsReporting" label="AppdynamicsReporting"/>
 </site>

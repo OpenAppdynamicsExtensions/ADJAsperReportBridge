@@ -15,6 +15,7 @@ public class ADDataAdapterService extends AbstractDataAdapterService {
 
 	private ADDataAdapter _adapter;
 
+	
 	public ADDataAdapterService(JasperReportsContext jContext,DataAdapter dataAdapter) {
 		super(jContext,dataAdapter);
 		// TODO Auto-generated constructor stub
