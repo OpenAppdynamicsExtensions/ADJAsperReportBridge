@@ -18,5 +18,8 @@
    <feature url="features/AppDynamics.Reporting.JasperReport_1.4.6.jar" id="AppDynamics.Reporting.JasperReport" version="1.4.6">
       <category name="AppdynamicsReporting"/>
    </feature>
+   <feature url="features/AppDynamics.Reporting.JasperReport_1.4.7.jar" id="AppDynamics.Reporting.JasperReport" version="1.4.7">
+      <category name="AppdynamicsReporting"/>
+   </feature>
    <category-def name="AppdynamicsReporting" label="AppdynamicsReporting"/>
 </site>
