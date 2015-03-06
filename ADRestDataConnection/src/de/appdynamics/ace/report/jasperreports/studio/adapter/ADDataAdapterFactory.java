@@ -2,6 +2,7 @@ package de.appdynamics.ace.report.jasperreports.studio.adapter;
 
 import net.sf.jasperreports.data.DataAdapter;
 import net.sf.jasperreports.data.DataAdapterService;
+import net.sf.jasperreports.engine.JasperReportsContext;
 
 import org.eclipse.swt.graphics.Image;
 
@@ -28,11 +29,13 @@ public class ADDataAdapterFactory implements DataAdapterFactory {
 		return ADDataAdapter.class.getName();
 	}
 
+
 	@Override
-	public DataAdapterService createDataAdapterService(DataAdapter dataAdapter) {
+	public DataAdapterService createDataAdapterService(
+			JasperReportsContext jasperReportsContext, DataAdapter dataAdapter) {
 		// TODO Auto-generated method stub
 		return new ADDataAdapterService(JasperReportsConfiguration.getDefaultJRConfig(),dataAdapter);
-	}
+		}
 
 	@Override
 	public String getLabel() {
@@ -66,5 +69,6 @@ public class ADDataAdapterFactory implements DataAdapterFactory {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
 
 }
