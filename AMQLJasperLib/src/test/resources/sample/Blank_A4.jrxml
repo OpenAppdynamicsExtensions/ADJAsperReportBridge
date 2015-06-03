@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.qualifier using JasperReports Library version 6.0.4  -->
+<!-- 2015-03-06T16:27:39 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="02ed3adb-f7b5-45c1-afa4-8db028d850a2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString language="amql">
+		<![CDATA[export aggregated * from "Business Transaction Performance|Business Transactions".* as Tier. * as BT on Application "E-Commerce_Demo"
+for 1 day]]>
+	</queryString>
+	<field name="path" class="java.lang.String"/>
+	<field name="time" class="java.sql.Timestamp"/>
+	<field name="Tier" class="java.lang.String"/>
+	<field name="BT" class="java.lang.String"/>
+	<field name="Number of Slow Calls" class="java.lang.Double"/>
+	<field name="Average Response Time (ms)" class="java.lang.Double"/>
+	<field name="Average Response Time (ms) (max)" class="java.lang.Double"/>
+	<field name="Average Response Time (ms) (min)" class="java.lang.Double"/>
+	<field name="Average Response Time (ms) (sum)" class="java.lang.Double"/>
+	<field name="Average Response Time (ms) (stdDev)" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="29" y="0" width="100" height="30" uuid="0b3a3d8b-8a6c-48a6-92fe-f336be6de503"/>
+				<text><![CDATA[path]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="0" width="100" height="30" uuid="ee040e35-925c-4227-b67b-1813df44804d"/>
+				<text><![CDATA[BT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="0" width="100" height="30" uuid="7c8dded4-08c8-4afa-8778-4cb63d42d905"/>
+				<text><![CDATA[Average Response Time (ms)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="29" y="27" width="100" height="30" uuid="75e96113-9a53-4382-859b-2d98fb005294"/>
+				<textFieldExpression><![CDATA[$F{path}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="38" width="100" height="30" uuid="472ab8f5-3303-41cd-9b8b-29dc37576030"/>
+				<textFieldExpression><![CDATA[$F{BT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="42" width="100" height="30" uuid="8b115421-a95d-4cf9-83e2-5bd4754cc126"/>
+				<textFieldExpression><![CDATA[$F{Average Response Time (ms)}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
