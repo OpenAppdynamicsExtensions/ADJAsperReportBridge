@@ -19,6 +19,8 @@ import com.jaspersoft.studio.data.DataAdapterDescriptor;
 import com.jaspersoft.studio.messages.Messages;
 import com.jaspersoft.studio.swt.widgets.WSecretText;
 
+import de.appdynamics.ace.report.jasperreports.amql.adapter.ADDataAdapter;
+
 public class ADDataComposite extends ADataAdapterComposite{
 
 	private Spinner spinnerRecords;

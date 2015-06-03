@@ -14,8 +14,9 @@ import net.sf.jasperreports.engine.design.JRDesignField;
 import com.jaspersoft.studio.data.DataAdapterDescriptor;
 import com.jaspersoft.studio.data.DataAdapterEditor;
 import com.jaspersoft.studio.data.fields.IFieldsProvider;
-
 import com.jaspersoft.studio.utils.jasper.JasperReportsConfiguration;
+
+import de.appdynamics.ace.report.jasperreports.amql.adapter.ADDataAdapter;
 
 public class ADDataAdapterDescriptor extends DataAdapterDescriptor implements IFieldsProvider{
 

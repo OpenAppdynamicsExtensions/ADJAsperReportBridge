@@ -3,9 +3,9 @@ package de.appdynamics.ace.report.jasperreports.studio;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.appdynamics.ace.report.jasperreports.studio.adapter.ADDataAdapterServiceFactory;
-import de.appdynamics.ace.report.jasperreports.studio.adapter.ADExecuterFactoryBundle;
-import de.appdynamics.ace.report.jasperreports.studio.functions.ADFunctionBundle;
+import de.appdynamics.ace.report.jasperreports.amql.adapter.ADDataAdapterServiceFactory;
+import de.appdynamics.ace.report.jasperreports.amql.adapter.ADExecuterFactoryBundle;
+import de.appdynamics.ace.report.jasperreports.amql.functions.ADFunctionBundle;
 import net.sf.jasperreports.data.DataAdapterServiceFactory;
 import net.sf.jasperreports.engine.JRPropertiesMap;
 import net.sf.jasperreports.engine.query.JRQueryExecuterFactoryBundle;

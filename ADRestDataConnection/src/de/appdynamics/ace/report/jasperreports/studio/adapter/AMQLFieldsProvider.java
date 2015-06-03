@@ -28,6 +28,8 @@ import de.appdynamics.ace.metric.query.parser.MetricParserException;
 import de.appdynamics.ace.metric.query.parser.MetricQuery;
 import de.appdynamics.ace.metric.query.parser.QueryException;
 import de.appdynamics.ace.metric.query.rest.ControllerRestAccess;
+import de.appdynamics.ace.report.jasperreports.amql.adapter.ADDataAdapterService;
+import de.appdynamics.ace.report.jasperreports.amql.adapter.AMQLQueryExecuter;
 
 public class AMQLFieldsProvider implements IFieldsProvider {
 

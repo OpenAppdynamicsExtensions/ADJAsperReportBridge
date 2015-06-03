@@ -6,10 +6,15 @@ import net.sf.jasperreports.engine.JasperReportsContext;
 
 import org.eclipse.swt.graphics.Image;
 
+import de.appdynamics.ace.report.jasperreports.amql.adapter.ADDataAdapter;
+
 import com.jaspersoft.studio.data.DataAdapterDescriptor;
 import com.jaspersoft.studio.data.DataAdapterFactory;
 import com.jaspersoft.studio.data.adapter.IDataAdapterCreator;
 import com.jaspersoft.studio.utils.jasper.JasperReportsConfiguration;
+
+import de.appdynamics.ace.report.jasperreports.amql.adapter.ADDataAdapter;
+import de.appdynamics.ace.report.jasperreports.amql.adapter.ADDataAdapterService;
 
 public class ADDataAdapterFactory implements DataAdapterFactory {
 
@@ -23,20 +28,12 @@ public class ADDataAdapterFactory implements DataAdapterFactory {
 		return new ADDataAdapterDescriptor();
 	}
 
-	@Override
-	public String getDataAdapterClassName() {
-		// TODO Auto-generated method stub
-		return ADDataAdapter.class.getName();
-	}
 
 
-	@Override
-	public DataAdapterService createDataAdapterService(
-			JasperReportsContext jasperReportsContext, DataAdapter dataAdapter) {
-		// TODO Auto-generated method stub
-		return new ADDataAdapterService(JasperReportsConfiguration.getDefaultJRConfig(),dataAdapter);
-		}
-
+	
+	
+	
+	
 	@Override
 	public String getLabel() {
 		// TODO Auto-generated method stub
@@ -68,6 +65,23 @@ public class ADDataAdapterFactory implements DataAdapterFactory {
 	public boolean isDeprecated() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public String getDataAdapterClassName() {
+
+		return ADDataAdapter.class.getName();
+
+
+	}
+
+	@Override
+	public DataAdapterService createDataAdapterService(
+			JasperReportsContext jasperReportsContext, DataAdapter dataAdapter) {
+
+		// TODO Auto-generated method stub
+		return new ADDataAdapterService(JasperReportsConfiguration.getDefaultJRConfig(),dataAdapter);
+
 	}
 
 

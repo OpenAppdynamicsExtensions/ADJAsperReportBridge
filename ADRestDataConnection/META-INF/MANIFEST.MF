@@ -18,7 +18,8 @@ Bundle-ClassPath: .,
  lib/jackson-core-asl-1.9.13.jar,
  lib/jackson-mapper-asl-1.9.13.jar,
  lib/org.abego.treelayout.core-1.0.1.jar,
- lib/RestMetricQueries-0.4.7.jar
+ lib/RestMetricQueries-0.4.7.jar,
+ lib/AMQLJasperLib-0.2.0.jar
 Eclipse-BuddyPolicy: registered
 Eclipse-RegisterBuddy: com.jaspersoft.studio.data
 Export-Package: de.appdynamics.ace,
