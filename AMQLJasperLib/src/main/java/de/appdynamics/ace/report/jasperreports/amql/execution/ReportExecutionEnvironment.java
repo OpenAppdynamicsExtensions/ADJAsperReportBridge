@@ -17,14 +17,23 @@ import java.util.logging.Logger;
  */
 public class ReportExecutionEnvironment {
     final static Logger logger = Logger.getLogger(ReportExecutionEnvironment.class.getName());
-
+    private final Map<String, String> _map;
 
 
     private ADDataAdapter _data;
 
     public ReportExecutionEnvironment(ADDataAdapter adDataAdapter) {
         setData(adDataAdapter);
+        _map = new HashMap<String,String>() ;
+    }
 
+    public ReportExecutionEnvironment(ADDataAdapter adDataAdapter, Map<String,String> map) {
+        setData(adDataAdapter);
+        _map = map ;
+    }
+
+    public void setParameter(String key, String value)  {
+        _map.put(key,value);
     }
 
     public void setData(ADDataAdapter data) {
@@ -53,6 +62,9 @@ public class ReportExecutionEnvironment {
                 _data.getUsername(), _data.getPassword(), _data.getAccount());
 
         param.put(ADAdapterConstants.CONNECTION,rest);
+
+        param.putAll(_map);
+
         JasperPrint prn = JasperFillManager.fillReport(rpt, param);
 
         exporter.exportReport(prn);

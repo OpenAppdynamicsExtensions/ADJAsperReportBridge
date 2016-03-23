@@ -47,7 +47,7 @@ dependencies {
 
 // Publish
 group = 'com.appdynamics.ace.jasperamql'
-version = '0.2.2'
+version = '0.2.4'
 
 publishing {
     publications {

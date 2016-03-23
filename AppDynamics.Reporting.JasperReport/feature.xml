@@ -2,7 +2,7 @@
 <feature
       id="AppDynamics.Reporting.JasperReport"
       label="AppDynamicsAdapter(JasperReport)"
-      version="1.4.7">
+      version="1.6.1">
 
    <description url="http://www.example.com/description">
       AppDynamicsAdapter(JasperReport)
