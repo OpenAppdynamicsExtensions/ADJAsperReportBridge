@@ -6,18 +6,20 @@ import de.appdynamics.ace.report.jasperreports.amql.adapter.ADAdapterConstants;
 import de.appdynamics.ace.report.jasperreports.amql.adapter.ADDataAdapter;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.util.JRLoader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Created by stefan.marx on 06.03.15.
  */
 public class ReportExecutionEnvironment {
-    final static Logger logger = Logger.getLogger(ReportExecutionEnvironment.class.getName());
+    final Logger logger = LoggerFactory.getLogger(ReportExecutionEnvironment.class);
     private final Map<String, String> _map;
+
 
 
     private ADDataAdapter _data;
@@ -46,6 +48,8 @@ public class ReportExecutionEnvironment {
 
     public void executeCompiledReport(String reportFile, ReportExporter exporter) throws ReportExportException {
         try {
+
+            logger.info("Run Compiled Report");
             JasperReport rpt = (JasperReport) JRLoader.loadObjectFromFile(reportFile);
 
             runAndExport(exporter, rpt);

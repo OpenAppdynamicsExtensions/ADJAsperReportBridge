@@ -27,6 +27,11 @@ repositories {
         url "http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/"
     }
 
+    maven{
+        url "http://jaspersoft.artifactoryonline.com/jaspersoft/jr-ce-releases"
+    }
+
+
 
 }
 
@@ -42,12 +47,13 @@ dependencies {
     testCompile "junit:junit:4.11"
     compile 'com.appdynamics.ace.restQuery:RestMetricQueries:0.4.7'
     compile 'net.sf.jasperreports:jasperreports:6.0.3'
+
 }
 
 
 // Publish
 group = 'com.appdynamics.ace.jasperamql'
-version = '0.2.4'
+version = '0.2.4-SNAPSHOT'
 
 publishing {
     publications {

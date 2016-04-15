@@ -8,6 +8,10 @@ import de.appdynamics.ace.report.jasperreports.amql.execution.PDFExporter;
 import de.appdynamics.ace.report.jasperreports.amql.execution.ReportExecutionEnvironment;
 import de.appdynamics.ace.report.jasperreports.amql.execution.ReportExportException;
 import org.apache.commons.cli.Option;
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -98,6 +102,22 @@ public class ReportCommand extends AbstractCommand {
 
         String[] paras = optionWrapper.getOptionValues(PARAMETER);
 
+        if (_debug) {
+
+            System.out.println("SETUP DEBUG LOGING");
+            ConsoleAppender console = new ConsoleAppender(); //create appender
+            //configure the appender
+            String PATTERN = "%d [%p:%C{1}] %m%n";
+            console.setLayout(new PatternLayout(PATTERN));
+            console.setThreshold(Level.DEBUG);
+            console.activateOptions();
+            //add appender to any Logger (here is root)
+            //Logger.getLogger("com.appdynamics").addAppender(console);
+            Logger.getRootLogger().addAppender(console);
+
+        }
+
+
         if (paras != null) {
             for (String p : paras) {
                 String[] sp = p.split("=");
@@ -136,6 +156,7 @@ public class ReportCommand extends AbstractCommand {
     }
 
     private void runReport(ReportExecutionEnvironment ev, String infile, String outfile) throws ReportExportException {
+
         ev.executeCompiledReport(infile,new PDFExporter(outfile));
     }
 
